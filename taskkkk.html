@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>user product </title>
+</head>
+<body>
+    
+    <script>
+
+
+        const input =prompt("enter your product choice");
+
+
+        const array =["watch","phone","likvid","sabu","cloth","shampu","water","laptop","mouse","pan","pansil","perfume","shoze","bag","purse"];
+
+        let ans = array.filter((a) => a==input);
+
+
+
+        if(ans.length !==0)
+        {
+            console.log("found");
+        }
+        else
+        {
+            console.log("not found");
+        }
+
+        
+
+    </script>
+</body>
+</html>

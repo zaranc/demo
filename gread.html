@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gread</title>
+</head>
+<body>
+
+    <script>
+
+        const sub1=96;
+        const sub2=85;
+        const sub3=90;
+
+        const total =((sub1 + sub2 + sub3) /300) *100
+        console.log(total)
+
+        if(total > 95)
+        {
+            document.write('a++')
+
+        }
+        else if(total < 95 && total > 85)
+            {
+                document.write('a+')
+            }
+        else if(total < 85 && total > 75)
+            {
+                document.write('b+')
+            }
+        else if(total < 75 && total > 65)
+            {
+                document.write('b')
+            }
+        else if(total < 65 && total > 55)
+            {
+                document.write('c')
+            }
+        else if(total < 55 && total > 35)
+            {
+                document.write('d')
+            }
+            else{
+                document.write('fail')
+            }
+    </script>
+    
+</body>
+</html>

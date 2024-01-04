@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> find which number is greter in 4 numbers using ledder if else. </title>
+</head>
+
+<body>
+
+    <script>
+
+        function maximum(number) {
+
+            if (a > b && a > c && a > d && a > e)
+             console.log("A is maximum");
+
+            else
+                if (b > c && b > d && b > e)
+                console.log("B is maximum");
+
+                else
+                    if (c > d && c > e)
+                    console.log("C is maximum");
+
+                    else
+                        if (d > e)
+                        console.log("D is maximum");
+
+                        else
+                        console.log("E is maximum");
+
+        }
+
+        const a = parseInt(prompt("enter your number = a"));
+        const b = parseInt(prompt("enter your number = b"));
+        const c = parseInt(prompt("enter your number = c"));
+        const d = parseInt(prompt("enter your number = d"));
+        const e = parseInt(prompt("enter your number = e"));
+        const result = maximum(a, b, c, d,e);
+        console.log(a, b, c, d,e);
+
+    </script>
+</body>
+
+</html>

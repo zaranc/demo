@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>hello</h1>
+    <input type="text" id="fname">
+    <button class="hide">hide</button>
+    <button id="show">show</button>
+    <br><br><br>
+    <div style="height: 250px; width: 250px; background-color: red;"></div>
+    <br><br>
+    <button class="m-hide">m-hide</button>
+    <button id="m-show">m-show</button>
+
+    <script>
+
+        $(document).ready(function () {
+            $(".hide").click(function () {
+                $("h1").hide(1000, function () {
+
+                });
+              let fname = $("#fname").val();
+                console.log(fname);
+            });
+
+            $("#show").click(function () {
+                $("h1").show(1000, function () {
+
+                });
+            });
+
+            $(".m-hide").mouseenter(function () {
+                $("div").hide(2000, function () {
+
+                });
+            });
+
+            $("#m-show").mouseout(function () {
+                $("div").show(2000, function () {
+
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        class student {
+            constructor(name,balance,balancee,ans){
+                this.name = name;
+                this.balance = balance;
+                this.balancee = balancee;
+                this.ans = balance - balancee;
+            }
+
+            printbalance(){
+                console.log(
+                    "your name is",this.name + "","your balance is",this.balance, "-",this.balancee, "=",this.ans);
+            }
+        }
+
+        let s1 = new student("shayam", 50000,500);
+        let s2 = new student("ram", 20000,15000);
+        let s3 = new student("garvit", 1000,700);
+        s1.printbalance();
+        s2.printbalance();
+        s3.printbalance();
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> perform a swapping of two variables.(all function use)</title>
+</head>
+
+<body>
+
+    <script>
+
+        function swapVariables(a, b) {
+            const temp = a;
+            a = b;
+            b = temp;
+            return [a, b];
+        }
+        let x = parseInt(prompt("enter your num = x"));
+        let y = parseInt(prompt("enter your num = y"));
+
+        console.log("Before swapping: x =", x, "and y =", y);
+
+        [x, y] = swapVariables(x, y);
+
+        console.log("swapping: x =", x, "and y =", y);
+    </script>
+</body>
+
+</html>

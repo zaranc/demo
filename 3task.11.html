@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check weather num is prime or not using for loop</title>
+</head>
+
+<body>
+
+    <script>
+
+        let a = parseInt(prompt("ENTER ANY VALUE TO FIND THAT NUMBER IS EITHER PRIME OR NOT PRIME"));
+        let b;
+        let count = 0;
+
+        for (b = 1; b <= a; b++) {
+            if (a % b == 0) {
+                count++;
+            }
+        }
+        if (count == 2)
+            console.log("THIS NUMBER IS PRIME NUMBER", a);
+        else
+            console.log("THIS NUMBER IS NOT A PRIME NUMBER", a);
+
+    </script>
+</body>
+
+</html>

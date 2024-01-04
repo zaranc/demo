@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculate percentage and grade according to following</title>
+</head>
+<body>
+    
+    <script>
+
+        const Physics=96;
+        const Chemistry=85;
+        const Biology=90;
+        const Mathematics=95;
+        const Computer=88;
+
+        const total =(( Physics + Chemistry + Biology + Mathematics + Computer) /500) *100
+        console.log(total)
+
+        if(total > 90)
+        {
+            document.write('A')
+
+        }
+        else if(total < 90 && total > 80)
+            {
+                document.write('B')
+            }
+        else if(total < 80 && total > 70)
+            {
+                document.write('C')
+            }
+        else if(total < 70 && total > 60)
+            {
+                document.write('D')
+            }
+        else if(total < 60 && total > 50)
+            {
+                document.write('E')
+            }
+        else if(total < 50 && total > 40)
+            {
+                document.write('F')
+            }
+            else{
+                document.write('fail')
+            }
+    </script>
+</body>
+</html>

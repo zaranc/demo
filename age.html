@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <label>first name:-</label>
+    <input type="text" placeholder="enter your first name" id="fname">
+    <br><br>
+    <label>last name:-</label>
+    <input type="text" placeholder="enter your last name" id="lname">
+    <br><br>
+    <label>email:-</label>
+    <input type="email" placeholder="...@email.com" id="email">
+    <br><br>
+    <label>age:-</label>
+    <input type="number" placeholder="enter your age" id="age">
+    <br>
+    <h1 id="details"></h1>
+    <button onclick="handle()">submit</button>
+
+
+    <script>
+        const handle = () => {
+            let fname = document.getElementById("fname").value;
+            let lname = document.getElementById("lname").value;
+            let email = document.getElementById("email").value;
+            let age = document.getElementById("age").value;
+
+            if (fname == ''){
+                document.getElementById("details").innerHTML = "enter your first name"
+            }
+            else if (lname == ''){
+                document.getElementById("details").innerHTML = "enter your last name"
+            }
+            else if (email == ''){
+                document.getElementById("details").innerHTML = "enter your email"
+            }
+            else if (age == ''){
+                document.getElementById("details").innerHTML = "enter your age"
+            }
+            else if (age <= 0){
+                document.getElementById("details").innerHTML = "please enter your valid age"
+                details.style.color ="orange"
+            }
+            else if (age < 18){
+                document.getElementById("details").innerHTML = "you are not eligible for vote"
+                details.style.color ="red"
+            }
+            else if (age >= 18){
+                document.getElementById("details").innerHTML = "you are eligible for voting"
+                details.style.color ="green"
+            }
+
+        };
+    </script>
+</body>
+</html>

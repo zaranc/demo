@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>local.storge</title>
+  </head>
+  <body>
+    <input type="text" name="product" id="product" />
+    <button onclick="save()">Add</button>
+
+    <ol></ol>
+
+    <script>
+      const arr = localStorage.getItem("product")
+        ? JSON.parse(localStorage.getItem("product"))
+        : [];
+
+      const ol = document.querySelector("ol");
+
+      const save = () => {
+        const product = document.getElementById("product").value;
+        arr.push(product);
+        localStorage.setItem("product", JSON.stringify(arr));
+        loadData(product);
+      };
+
+      console.log(localStorage);
+
+      arr.forEach(loadData);
+
+      function loadData(product) {
+        const li = document.createElement("li");
+        li.textContent = product;
+        ol.appendChild(li);
+
+        console.log(product, "p");
+      }
+    </script>
+  </body>
+</html>

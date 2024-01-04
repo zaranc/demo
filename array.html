@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array file</title>
+</head>
+<body>
+    
+    <script>
+
+        num1 =1
+        num2 =2
+        num3 =3
+        num4 =4
+        num5 =5
+
+        const arr =[num1, num2, num3, num4, num5]
+
+        console.log(arr);
+
+        for (let i=0; i < arr.length; i++)
+        {
+            console.log(arr[i]);
+        }
+
+
+        // ------------------------------------
+
+        const arr1 =[10,20,30,40,50]
+        arr.push(60)
+        arr1.push(70)
+        arr1.pop()
+        console.log(arr1);
+
+        let sum = 0
+        for(let i = 0; i < arr1.length; i++)
+        {
+            sum = sum + arr1[i]
+        }
+
+        console.log("total =", sum)
+
+        // --------------------------------------
+
+       
+        const checkk =[10,20,30,40,50]
+        let user =prompt("enter value1")
+
+        
+
+        console.log(checkk.length);
+
+        for(let i =0; i < checkk.length; i++)
+        {
+            if(checkk[i] == user)
+            {
+                console.log("true")
+            
+            }
+            if(checkk[i]!==user)
+            {
+                console.log("false")
+                
+            }
+            
+        }
+
+        // ----------------------------------------------
+
+
+        
+
+        
+    </script>
+</body>
+</html>

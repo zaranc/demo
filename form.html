@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+</head>
+
+<body>
+    <label>first name:-</label>
+    <input type="text" placeholder="enter your first name" id="fname">
+    <br><br>
+
+    <label>last name:-</label>
+    <input type="text" placeholder="enter your last name" id="lname">
+    <br><br>
+
+    <label>phone number:-</label>
+    <input type="number" placeholder="+91....." id="num">
+    <br><br>
+
+    <label>email:-</label>
+    <input type="text" placeholder="...@gmail.com" id="email">
+    <br><br>
+
+    <label>address:-</label>
+    <textarea placeholder="enter your address" id="add"></textarea>
+    <br><br>
+
+    <label>gender:-</label>
+    <label>
+        <input type="radio" name="male" value="male" id="gen"><span>male</span>
+    </label>
+    <label>
+        <input type="radio" name="male" value="female" id="gen"><span>female</span>
+    </label>
+    <label>
+        <input type="radio" name="male" value="other" id="gen"><span>other</span>
+    </label>
+    <br><br>
+
+    <label>profile photo:-</label>
+    <input type="text" placeholder="choose file" id="photo"><span>no file chosen</span>
+    <br><br>
+
+    <label>birthday:-</label>
+    <input type="date" id="birth">
+    <br><br>
+
+    <label>hobby:-</label>
+    <input type="checkbox" name="hobby" value="movie" id="hobby"><span>movie</span>
+    <input type="checkbox" name="hobby" value="dance" id="hobby"><span>dance</span>
+    <input type="checkbox" name="hobby" value="music" id="hobby"><span>music</span>
+    <br><br>
+
+    <label>password:-</label>
+    <input type="password" id="pass">
+    <br><br>
+    <hr>
+    <hr>
+
+    <h1 id="details"></h1>
+    <hr>
+    <hr>
+
+    <button onclick="handle()">submit</button>
+    </form>
+
+</body>
+    <script>
+
+        const handle = () => {
+            let fname = document.getElementById("fname").value;
+            let lname = document.getElementById("lname").value;
+            let num = document.getElementById("num").value;
+            let email = document.getElementById("email").value;
+            let add = document.getElementById("add").value;
+            let gen = document.getElementById("gen").value;
+            let photo = document.getElementById("photo").value;
+            let birth = document.getElementById("birth").value;
+            let hobby = document.getElementById("hobby").value;
+            let pass = document.getElementById("pass").value;
+
+            if (fname == '') {
+                document.getElementById("details").innerHTML = "enter your details"
+                details.style.color = "red";
+            }
+            else if (lname == '') {
+                document.getElementById("details").innerHTML = "enter your details"
+                details.style.color = "red";
+            }
+            else if (num == '') {
+                document.getElementById("details").innerHTML = "enter your details"
+                details.style.color = "red";
+            }
+            else if (email == '') {
+                document.getElementById("details").innerHTML = "enter your details"
+                details.style.color = "red";
+            }
+            else if (add == '') {
+                document.getElementById("details").innerHTML = "enter your details"
+                details.style.color = "red";
+            }
+            else if (gen == '') {
+                document.getElementById("details").innerHTML = "enter your details"
+                details.style.color = "red";
+            }
+            else if (photo == '') {
+                document.getElementById("details").innerHTML = "enter your details"
+                details.style.color = "red";
+            }
+            else if (birth == '') {
+                document.getElementById("details").innerHTML = "enter your details"
+                details.style.color = "red";
+            }
+            else if (hobby == '') {
+                document.getElementById("details").innerHTML = "enter your details"
+                details.style.color = "red";
+            }
+            else if (pass == '') {
+                document.getElementById("details").innerHTML = "enter your details"
+                details.style.color = "red";
+            }
+            else {
+                document.getElementById("details").innerHTML = "suceessfull your form is submited"
+                details.style.color = "green";
+            }
+        };
+    </script>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>find which number is greter in 4 numbers using nested if else. (using simple function)</title>
+</head>
+
+<body>
+
+    <script>
+
+        function maximum(number) {
+            if (a > b) {
+                if (a > c) {
+                    if (a > d) {
+                        console.log("A is maximum  ");
+                    }
+                    else {
+                        console.log(" D is maximum");
+                    }
+                }
+                else if (c > d) {
+                    console.log(" C is maximum");
+                }
+                else {
+                    console.log(" D is maximum");
+                }
+            }
+            else if (b > c) {
+                if (b > d) {
+                    console.log(" B is maximum");
+                }
+                else {
+                    console.log(" D is maximum");
+                }
+            }
+            else if (c > d) {
+                console.log(" C is maximum");
+            }
+            else {
+                console.log(" D is maximum");
+            }
+        }
+
+        const a = parseInt(prompt("enter your number = a"));
+        const b = parseInt(prompt("enter your number = b"));
+        const c = parseInt(prompt("enter your number = c"));
+        const d = parseInt(prompt("enter your number = d"));
+        const result = maximum(a, b, c, d);
+        console.log(a, b, c, d);
+    </script>
+</body>
+
+</html>

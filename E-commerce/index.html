@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>index</title>
+  </head>
+  <body>
+    <input type="text" name="username" id="username" />
+    <input type="password" name="password" id="password" />
+    <button onclick="login()">login</button><br />
+    <label id="err"></label>
+
+    <script>
+      const login = () => {
+        const user = document.getElementById("username").value;
+        const pass = document.getElementById("password").value;
+
+        if (user === "user" && pass === "123") {
+          window.location.href = "./user/user.html";
+        } else if (user === "admin" && pass === "123") {
+          window.location.href = "./admin/admin.html";
+        } else {
+          document.getElementById("err").innerHTML = "Invalid credential";
+        }
+      };
+    </script>
+  </body>
+</html>

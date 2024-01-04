@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>admin</title>
+  </head>
+  <body>
+    <h1>admin</h1>
+
+    <table>
+      <thead>
+        <th>ProductName</th>
+        <th>ProductDesc</th>
+        <th>Price</th>
+      </thead>
+      <tbody id="table-body"></tbody>
+    </table>
+
+    <input type="text" name="productName" id="productName" />
+    <input type="text" name="productDesc" id="productDesc" />
+    <input type="number" name="price" id="price" />
+    <button onclick="save()">save</button>
+
+    <script>
+      const productList = JSON.parse(localStorage.getItem("productList")) || [];
+
+      const tbody = document.getElementById("table-body");
+
+      const save = () => {
+        const productName = document.getElementById("productName").value;
+        const productDesc = document.getElementById("productDesc").value;
+        const price = document.getElementById("price").value;
+
+        const data = {
+          productName,
+          productDesc,
+          price,
+        };
+
+        productList.push(data);
+
+        localStorage.setItem("productList", JSON.stringify(productList));
+        loadProduct(data);
+      };
+
+      productList.forEach(loadProduct);
+
+      function loadProduct(data) {
+        const tr = document.createElement("tr");
+        tr.innerHTML = `
+        <td>${data.productName}</td>
+        <td>${data.productDesc}</td>
+        <td>${data.price}</td>
+        <button>view</button>
+        <button>remove</button>
+
+        `;
+
+        tbody.appendChild(tr);
+      }
+    </script>
+  </body>
+</html>

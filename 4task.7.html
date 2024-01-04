@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>find which number is greter in 3 numbers using nested if else</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        function findGreatestNumber(a, b, c) {
+            if (a >= b) {
+                if (a >= c) {
+                
+                    console.log(" A is maximum");
+                } 
+                else {
+                    
+                    console.log(" C is maximum");
+                }
+            }
+            else {
+                if (b >= c) {
+
+                    console.log(" B is maximum");
+                } 
+                else {
+
+                    console.log(" C is maximum");
+                }
+            }
+        }
+        const a= parseInt(prompt("enter your num = a"));
+        const b = parseInt(prompt("enter your num = b"));
+        const c = parseInt(prompt("enter your num = c"));
+
+        const greatest = findGreatestNumber(a,b,c);
+        console.log(a,b,c);
+    </script>
+</body>
+
+</html>
